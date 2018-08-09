@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加减乘除</title>
+	</head>
+	<body>
+		<input type="number" id="first-number"   placeholder="第一个数字" />
+			<input type="number" id="second-number"   placeholder="第二个数字" />
+			<button id="add-btn">加</button>
+			<button id="minus-btn">减</button>
+			<button id="times-btn">乘</button>
+			<button id="divide-btn">除</button>
+			<p id="result">运算结果</p>
+			<script type="text/javascript">
+				var result;
+				var addbtn=document.querySelector("#add-btn");
+				addbtn.onclick=function(){
+					var firstnumber=document.querySelector("#first-number").value;
+					var secondnumber=document.querySelector("#second-number").value;
+					if(firstnumber!=""||secondnumber!=""){
+					result=parseInt(firstnumber)+parseInt(secondnumber);
+					document.getElementById("result").innerHTML=result;
+					}else{
+						alert("请输入数字");
+					}
+				}
+				var minubtn=document.querySelector("#minus-btn");
+				minubtn.onclick=function(){
+					var firstnumber=document.querySelector("#first-number").value;
+					var secondnumber=document.querySelector("#second-number").value;
+					if(firstnumber!=""||secondnumber!=""){
+					result=parseInt(firstnumber)-parseInt(secondnumber);
+					document.getElementById("result").innerHTML=result;
+					}else{
+						alert("请输入数字");
+					}
+				}
+				var timesbtn=document.querySelector("#times-btn");
+				timesbtn.onclick=function(){
+					var firstnumber=document.querySelector("#first-number").value;
+					var secondnumber=document.querySelector("#second-number").value;
+					if(firstnumber!=""||secondnumber!=""){		
+					result=parseInt(firstnumber)*parseInt(secondnumber);
+					document.getElementById("result").innerHTML=result;
+					}else{
+						alert("请输入数字");
+					}
+				}
+			    var dividebtn=document.querySelector("#divide-btn");
+				dividebtn.onclick=function(){
+					var firstnumber=document.querySelector("#first-number").value;
+					var secondnumber=document.querySelector("#second-number").value;
+					if(secondnumber!="0"){					
+						if(firstnumber!=""||secondnumber!=""){							
+					result=parseInt(firstnumber)/parseInt(secondnumber);
+					document.getElementById("result").innerHTML=result;
+						}else{
+						alert("请输入数字");	
+						}
+					}else{
+						alert("除数不能为零");
+					}
+				}
+
+			    
+				
+			</script>
+	</body>
+</html>
